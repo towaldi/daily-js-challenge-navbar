@@ -24,7 +24,7 @@ body {
    elements
    ========================================================================== */
 
-header {
+.header {
     /* display & box model */
     display: flex;
     flex-direction: row;
@@ -35,6 +35,43 @@ header {
     /* other */
     background-color: #fff;
     border-bottom: 2px solid #000;
+}
+
+.header-text-icon {
+    /* display & box model */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* other */
+}
+
+.tab-list {
+    /* display & box model */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    /* other */
+    list-style-type: none;
+}
+
+.tab {
+    /* display & box model */
+    padding: 0.5rem 1rem;
+    /* other */
+    background-color: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.tab:hover {
+    /* other */
+    background-color: #efefef;
 }
 
 main {
@@ -48,51 +85,14 @@ main {
     gap: 1rem;
 }
 
-.review-card {
+.icon-btn {
     /* display & box model */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem;
-    max-width: 40rem;
-    /* other */
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 1rem;
-    box-shadow: 0.5rem 0.5rem #000;
-}
-
-.monogram {
-    /* display & box model */
-    height: 8rem;
-    width: 8rem;
-    /* other */
-    border-radius: 8rem;
-}
-
-.btn {
-    /* display & box model */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    /* Other */
-    background-color: transparent;
-    border: 2px solid #000;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-}
-
-.btn:hover {
-    /* other */
-    background-color: #efefef;
+    display: none
 }
 
 
 /* ==========================================================================
-   layout
+   layout + effects
    ========================================================================== */
 
 .row-1rem {
@@ -101,6 +101,67 @@ main {
     flex-direction: row;
     gap: 1rem;
     /* other */
+}
+
+.d-none {
+    /* display & box model */
+    display: none;
+}
+
+
+
+/* ==========================================================================
+   responsiveness
+   ========================================================================== */
+
+@media screen and (max-width: 748px){
+
+    .header {
+        /* display & box model */
+        flex-direction: column;
+        /* other */
+    }
+
+    .tab-list {
+        /* display & box model */
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        /* other */
+        list-style-type: none;
+    }
+    
+    .tab {
+        /* display & box model */
+        padding: 0.5rem 1rem;
+        width: 100%;
+        /* other */
+        background-color: transparent;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .icon-btn {
+        /* display & box model */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        /* Other */
+        background-color: transparent;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+    }
+    
+    .icon-btn:hover {
+        /* other */
+        background-color: #efefef;
+    }
 }
 
 
@@ -117,28 +178,19 @@ h1 {
     color: #000;
 }
 
-h2, p {
+h2, li {
     font-family: 'Roboto Mono', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
 }
 
+h2, li {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+}
+
 h2 {
-    font-weight: 400;
-    font-size: 1rem;
-    color: #000;
-}
-
-p {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #000;
-}
-
-a, .btn {
-    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
+    padding: 1rem;
 }
 
 
