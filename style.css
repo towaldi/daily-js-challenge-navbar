@@ -54,6 +54,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    overflow: hidden;
     /* other */
     list-style-type: none;
 }
@@ -133,7 +134,30 @@ main {
 /* ==========================================================================
    responsiveness
    ========================================================================== */
+@media screen and (min-width: 748px) {
 
+    .header {
+        /* display & box model */
+        flex-direction: row;
+    }
+
+    /* Important lines -> for displaying tabs */
+    .tab-list {
+        /* display & box model */
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .tab {
+        width: fit-content;
+    }
+
+    .icon-btn {
+        display: none;
+    }
+}
 
 
 /* ==========================================================================
