@@ -27,7 +27,7 @@ body {
 .header {
     /* display & box model */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
@@ -50,21 +50,24 @@ body {
 .tab-list {
     /* display & box model */
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     /* other */
     list-style-type: none;
 }
 
+
 .tab {
     /* display & box model */
     padding: 0.5rem 1rem;
+    width: 100%;
     /* other */
     background-color: transparent;
     border-radius: 0.5rem;
     cursor: pointer;
+    list-style-type: none;
     text-decoration: none;
     transition: all 0.1s ease-in-out;
 }
@@ -87,7 +90,20 @@ main {
 
 .icon-btn {
     /* display & box model */
-    display: none
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    /* Other */
+    background-color: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.icon-btn:hover {
+    /* other */
+    background-color: #efefef;
 }
 
 
@@ -108,65 +124,15 @@ main {
     display: none;
 }
 
-.d-flex {
-    /* display & box model */
-    display: none;
+.selected {
+    /* other */
+    background-color: #b7b7b7;
 }
 
 
 /* ==========================================================================
    responsiveness
    ========================================================================== */
-
-@media screen and (max-width: 748px){
-
-    .header {
-        /* display & box model */
-        flex-direction: column;
-        /* other */
-    }
-
-    .tab-list {
-        /* display & box model */
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        /* other */
-        list-style-type: none;
-    }
-    
-    .tab {
-        /* display & box model */
-        padding: 0.5rem 1rem;
-        width: 100%;
-        /* other */
-        background-color: transparent;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        text-decoration: none;
-        transition: all 0.1s ease-in-out;
-    }
-
-    .icon-btn {
-        /* display & box model */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5rem;
-        /* Other */
-        background-color: transparent;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: all 0.1s ease-in-out;
-    }
-    
-    .icon-btn:hover {
-        /* other */
-        background-color: #efefef;
-    }
-}
 
 
 
@@ -195,6 +161,13 @@ h2, li {
 
 h2 {
     padding: 1rem;
+}
+
+a, 
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: #000;
 }
 
 
